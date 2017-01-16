@@ -83,48 +83,40 @@
             <!-- /.row -->
             <div class="row">
                 <div class="col-md-6">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <strong>RealTemp &copy;</strong></div>
-                                <!-- /.panel-heading -->
-                                <div class="panel-body">
-                                 <div class="flot-chart">
-                                    <div class="flot-chart-content" id="flot-line-chart-moving" style="height: 400px"></div>
-                                </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>RealTemp &copy;</strong></div>
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                               <div class="flot-chart">
+                                <div class="flot-chart-content" id="flot-line-chart-moving" style="height: 400px"></div>
                             </div>
-                            <!-- /.panel-body -->
-                        </div>
-                        <!-- /.panel -->
-                    </div>
-                    <!-- /.col-lg-12 --> 
-                <div class="col-lg-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Temperature History
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <div id="morris-area-chart"></div>
                         </div>
                         <!-- /.panel-body -->
                     </div>
                     <!-- /.panel -->
                 </div>
-                <!-- /.col-lg-6 -->
-                <div class="col-lg-6">
-                    <div class="panel panel-default">
+                <!-- /.col-md-6 -->
+                <div class="col-md-6">
+                    <div class="panel panel-success">
                         <div class="panel-heading">
-                            Internal/External Temperature
+                            <i class="fa fa-info-circle" aria-hidden="true"></i> In the past 24 hours
                         </div>
-                        <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <div id="morris-bar-chart"></div>
+                            <h4>Highest temp: 30°C</h4>
+                            <h4>Lowest temp: 22°C</h4>
+                            <h4>Average temp: 26°C</h4>
                         </div>
-                        <!-- /.panel-body -->
+                        <a href="settings.html">
+                                <div class="panel-footer">
+                                    <span class="pull-left">Open Settings</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
                     </div>
-                    <!-- /.panel -->
                 </div>
-                <!-- /.col-lg-6 -->
+                <!-- /.col-md-6 -->
             </div>
             <!-- /.row -->
         </div>
@@ -141,17 +133,13 @@
 
     <!-- Metis Menu Plugin JavaScript -->
     <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
-    <!-- Morris Charts JavaScript -->
-    <script src="../bower_components/raphael/raphael-min.js"></script>
-    <script src="../bower_components/morrisjs/morris.min.js"></script>
-    <script src="../js/morris-data.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
     <script type="text/JavaScript">
-                $(function() {
+        $(function() {
 
-                var container = $("#flot-line-chart-moving");
+            var container = $("#flot-line-chart-moving");
 
     // Determine how many data points to keep based on the placeholder's initial size;
     // this gives us a nice high-res plot while avoiding more than one point per pixel.
@@ -246,14 +234,14 @@
     }, 300);
 
 });
-                
+
 </script>
-        <script src="../bower_components/flot/excanvas.min.js"></script>
-        <script src="../bower_components/flot/jquery.flot.js"></script>
-        <script src="../bower_components/flot/jquery.flot.pie.js"></script>
-        <script src="../bower_components/flot/jquery.flot.resize.js"></script>
-        <script src="../bower_components/flot/jquery.flot.time.js"></script>
-        <script src="../bower_components/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+<script src="../bower_components/flot/excanvas.min.js"></script>
+<script src="../bower_components/flot/jquery.flot.js"></script>
+<script src="../bower_components/flot/jquery.flot.pie.js"></script>
+<script src="../bower_components/flot/jquery.flot.resize.js"></script>
+<script src="../bower_components/flot/jquery.flot.time.js"></script>
+<script src="../bower_components/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
 
 </body>
 

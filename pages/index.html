@@ -13,14 +13,26 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Add IntroJs styles -->
+    <link href="../bower_components/introjs/introjs.css" rel="stylesheet">
     <!-- MetisMenu CSS -->
     <link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
-        <!-- Morris Charts CSS -->
+    <!-- Morris Charts CSS -->
     <link href="../bower_components/morrisjs/morris.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
     <!-- Font-Awesome Icons -->
     <script src="https://use.fontawesome.com/d683461627.js"></script>
+    
+    <script>
+        function startTour() {
+            var tour = introJs()
+            tour.setOption('tooltipPosition', 'auto');
+            tour.setOption('positionPrecedence', ['left', 'right', 'bottom', 'top'])
+            tour.start()
+        }
+    
+    </script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -53,11 +65,14 @@
                             <li>
                                 <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                             </li>
-                            <li>
+                            <li data-step="3" data-intro="Add your first plant here!">
                                 <a href="new-plant.html"><i class="fa fa-plus fa-fw"></i> Add a New Plant...</a>
                             </li>
                             <li>
                                 <a href="settings.html"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" onclick="javascript:startTour();"><i class="fa fa-exclamation fa-fw"></i> IntroJS</a>
                             </li>
                             <li>
                                 <a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
@@ -72,13 +87,13 @@
             <div id="page-wrapper">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Dashboard</h1>
+                        <h1 data-step="1" data-intro="This is a your home!" class="page-header">Dashboard</h1>
                     </div>
                     <!-- /.col-lg-12 -->
                 </div>
                 <!-- /.row -->
                 <div class="row">
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6" data-step="2" data-intro="Find all your crucial data here!">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <div class="row">
@@ -221,6 +236,9 @@
 
         <!-- Bootstrap Core JavaScript -->
         <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <!-- IntroJS JavaScript-->
+        <script type="text/javascript" src="../bower_components/introjs/intro.js"></script>
 
         <!-- Metis Menu Plugin JavaScript -->
         <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
