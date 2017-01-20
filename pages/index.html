@@ -3,291 +3,284 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
 
-    <title>CERES</title>
+<title>CERES</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Add IntroJs styles -->
-    <link href="../bower_components/introjs/introjs.css" rel="stylesheet">
-    <!-- MetisMenu CSS -->
-    <link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
-    <!-- Morris Charts CSS -->
-    <link href="../bower_components/morrisjs/morris.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
-    <!-- Font-Awesome Icons -->
-    <script src="https://use.fontawesome.com/d683461627.js"></script>
+<!-- Bootstrap Core CSS -->
+<link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Add IntroJs styles -->
+<link href="../bower_components/introjs/introjs.css" rel="stylesheet">
+<!-- Morris Charts CSS -->
+<link href="../bower_components/morrisjs/morris.css" rel="stylesheet">
+<!-- Custom CSS -->
+<link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+<!-- Font-Awesome Icons -->
+<link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<!-- IntroJS script -->
+<script>
+    function startTour() {
+        var tour = introJs()
+        tour.setOption('tooltipPosition', 'auto');
+        tour.setOption('positionPrecedence', ['left', 'right', 'bottom', 'top']);
+        tour.setOption('exitOnOverlayClick: false')
+        tour.start()
+    }
     
-    <script>
-        function startTour() {
-            var tour = introJs()
-            tour.setOption('tooltipPosition', 'auto');
-            tour.setOption('positionPrecedence', ['left', 'right', 'bottom', 'top'])
-            tour.start()
-        }
-    
-    </script>
+</script>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-    </head>
+</head>
 
-    <body>
+<body>
 
-        <div id="wrapper">
+<div id="wrapper">
 
-            <!-- Navigation -->
-            <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html"><img src="../assets/ceres-logo2.png"></a>
-                </div>
-                <!-- /.navbar-header -->
-                <div class="navbar-default sidebar" role="navigation">
-                    <div class="sidebar-nav navbar-collapse">
-                        <ul class="nav" id="side-menu">
-                            <li>
-                                <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
-                            </li>
-                            <li data-step="3" data-intro="Add your first plant here!">
-                                <a href="new-plant.html"><i class="fa fa-plus fa-fw"></i> Add a New Plant...</a>
-                            </li>
-                            <li>
-                                <a href="settings.html"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0);" onclick="javascript:startTour();"><i class="fa fa-exclamation fa-fw"></i> IntroJS</a>
-                            </li>
-                            <li>
-                                <a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- /.sidebar-collapse -->
-                </div>
-                <!-- /.navbar-static-side -->
-            </nav>
-
-            <div id="page-wrapper">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 data-step="1" data-intro="This is a your home!" class="page-header">Dashboard</h1>
-                    </div>
-                    <!-- /.col-lg-12 -->
-                </div>
-                <!-- /.row -->
-                <div class="row">
-                    <div class="col-lg-3 col-md-6" data-step="2" data-intro="Find all your crucial data here!">
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-thermometer-empty fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge">26°C</div>
-                                        <div>Temperature</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="temperature.html">
-                                <div class="panel-footer">
-                                    <span class="pull-left">View Details</span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-green">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-tint fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge">47%</div>
-                                        <div>Humidity</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="humidity.html">
-                                <div class="panel-footer">
-                                    <span class="pull-left">View Details</span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-yellow">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-bolt fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge">22W</div>
-                                        <div>Electricity</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="electricity.html">
-                                <div class="panel-footer">
-                                    <span class="pull-left">View Details</span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-red">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-sun-o fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge">1.2lm</div>
-                                        <div>Light Intensity</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="light.html">
-                                <div class="panel-footer">
-                                    <span class="pull-left">View Details</span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="panel panel-success">
-                            <div class="panel-heading">
-                                <i class="fa fa-info-circle fa-fw"></i> Information Panel
-                            </div>
-                            <!-- /.panel-heading -->
-                            <div class="panel-body">
-                                <h4>Your CERES Unit is growing <span class="text-success">Spinach<i class="fa fa-pagelines" aria-hidden="true"></i></span></h4>
-                                <div class="list-group">
-                                    <a href="#" class="list-group-item">
-                                        <i class="fa fa-birthday-cake fa-fw"></i>17 November 2016
-                                        <span class="pull-right text-muted small"><em>just today</em>
-                                        </span>
-                                    </a>
-                                    <a href="#" class="list-group-item">
-                                        <i class="fa fa-hourglass-end fa-fw"></i> 28 November 2016 
-                                        <span class="pull-right text-muted small"><em>24 days to go</em>
-                                        </span>
-                                    </a>
-                                </div>
-                                <!-- /.list-group -->
-                                <a href="#" class="btn btn-default btn-block">View All Info</a>
-                            </div>
-                            <!-- /.panel-body -->
-                        </div>
-                        <!--/.panel-->
-                    </div>
-                    <!--/.col-md-6 -->
-                    <div class="col-lg-6">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                Electricity Usage
-                            </div>
-                            <!-- /.panel-heading -->
-                            <div class="panel-body">
-                                <div id="morris-area-chart"></div>
-                            </div>
-                            <!-- /.panel-body -->
-                        </div>
-                        <!-- /.panel -->
-                    </div>
-                    <!-- /.col-lg-6 -->
-                    <!-- /.col-lg-12 --> 
-                </div>
-                <!-- /.row -->
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="../assets/ceres-logo2.png" alt="CERES Logo"></a>
             </div>
-            <!-- /#page-wrapper -->
+            <!-- /.navbar-header -->
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse" data-step="4" data-intro="Navigate around here!">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+                        <li data-step="3" data-intro="Add your first plant here!">
+                            <a href="new-plant.html"><i class="fa fa-plus fa-fw"></i> Add a New Plant...</a>
+                        </li>
+                        <li>
+                            <a href="settings.html"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" onclick="javascript:startTour();"><i class="fa fa-compass fa-fw"></i> Quick Tour</a>
+                        </li>
+                        <li>
+                            <a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 data-step="1" data-intro="This is a your home!" class="page-header">Dashboard</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row" data-step="2" data-intro="Find all your crucial data here!">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-thermometer-empty fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">26°C</div>
+                                    <div>Temperature</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="temperature.html">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-tint fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">47%</div>
+                                    <div>Humidity</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="humidity.html">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-bolt fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">22W</div>
+                                    <div>Electricity</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="electricity.html">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-red">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-sun-o fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">1.2lm</div>
+                                    <div>Light Intensity</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="light.html">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--/.row-->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <i class="fa fa-info-circle fa-fw"></i> Information Panel
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <h4>Your CERES Unit is growing <span class="text-success">Spinach<i class="fa fa-pagelines" aria-hidden="true"></i></span></h4>
+                            <div class="list-group">
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-birthday-cake fa-fw"></i>17 November 2016
+                                    <span class="pull-right text-muted small"><em>just today</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-hourglass-end fa-fw"></i> 28 November 2016 
+                                    <span class="pull-right text-muted small"><em>24 days to go</em>
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- /.list-group -->
+                            <a href="#" class="btn btn-default btn-block">View All Info</a>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!--/.panel-->
+                </div>
+                <!--/.col-md-6 -->
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Electricity Usage
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div id="morris-area-chart"></div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!--/.col-lg-6 -->
+            </div>
+            <!-- /.row -->
         </div>
-        <!-- /#wrapper -->
+        <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
 
-        <!-- jQuery -->
-        <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- jQuery -->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
 
-        <!-- Bootstrap Core JavaScript -->
-        <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
-        <!-- IntroJS JavaScript-->
-        <script type="text/javascript" src="../bower_components/introjs/intro.js"></script>
+    <!-- IntroJS JavaScript-->
+    <script type="text/javascript" src="../bower_components/introjs/intro.js"></script>
 
-        <!-- Metis Menu Plugin JavaScript -->
-        <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
+    <!--Morris.js-->
+    <script src="../bower_components/morrisjs/morris.min.js"></script>
+    <script src="../bower_components/raphael/raphael-min.js"></script>
+    <script type="text/javascript">
+        $(function() {
 
-        <!--Morris.js-->
-        <script src="../bower_components/morrisjs/morris.min.js"></script>
-        <script src="../bower_components/raphael/raphael-min.js"></script>
-        <script type="text/javascript">
-            $(function() {
-
-    Morris.Area({
-        element: 'morris-area-chart',
-        data: [{
-            period: '2017-01-01',
-            percentage: '0%' 
-        }, {
-            period: '2017-01-05',
-            percentage: '5%'
-        }, {
-            period: '2017-01-10',
-            percentage: '17%'
-        }, {
-            period: '2017-01-15',
-            percentage: '33%'
-        }, {
-            period: '2017-01-20',
-            percentage: '40%'
-        }, {
-            period: '2017-01-25',
-            percentage: '60%'
-        }, {
-            period: '2017-01-30',
-            percentage: '85%'
-        }],
-        xkey: 'period',
-        ykeys: ['percentage'],
-        labels: ['Usage'],
-        units: '%',
-        pointSize: 2,
-        hideHover: 'auto',
-        resize: true
-    });
-});
-        </script>
-
-        
-    <!-- Custom Theme JavaScript -->
-    <script src="../dist/js/sb-admin-2.js"></script>
-
+            Morris.Area({
+                element: 'morris-area-chart',
+                data: [{
+                    period: '2017-01-01',
+                    percentage: '0%' 
+                }, {
+                    period: '2017-01-05',
+                    percentage: '5%'
+                }, {
+                    period: '2017-01-10',
+                    percentage: '17%'
+                }, {
+                    period: '2017-01-15',
+                    percentage: '33%'
+                }, {
+                    period: '2017-01-20',
+                    percentage: '40%'
+                }, {
+                    period: '2017-01-25',
+                    percentage: '60%'
+                }, {
+                    period: '2017-01-30',
+                    percentage: '85%'
+                }],
+                xkey: 'period',
+                ykeys: ['percentage'],
+                labels: ['Usage'],
+                units: '%',
+                pointSize: 2,
+                hideHover: 'auto',
+                resize: true
+            });
+        });
+    </script>
 
 </body>
 
